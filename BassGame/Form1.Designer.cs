@@ -86,6 +86,17 @@ namespace BassGame
             this.btnBell = new System.Windows.Forms.Button();
             this.btnApple = new System.Windows.Forms.Button();
             this.btnOrange = new System.Windows.Forms.Button();
+            this.ptrbLightP2 = new System.Windows.Forms.PictureBox();
+            this.ptrbLightP3 = new System.Windows.Forms.PictureBox();
+            this.ptrbLightP5 = new System.Windows.Forms.PictureBox();
+            this.ptrbLightP4 = new System.Windows.Forms.PictureBox();
+            this.ptrbLightP7 = new System.Windows.Forms.PictureBox();
+            this.ptrbLightP6 = new System.Windows.Forms.PictureBox();
+            this.ptrbLightP9 = new System.Windows.Forms.PictureBox();
+            this.ptrbLightP8 = new System.Windows.Forms.PictureBox();
+            this.ptrbLightP10 = new System.Windows.Forms.PictureBox();
+            this.ptrbLightP1 = new System.Windows.Forms.PictureBox();
+            this.timerFLashPoint = new System.Windows.Forms.Timer(this.components);
             this.pnlGameBoard.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptrbPtrDown)).BeginInit();
@@ -113,6 +124,16 @@ namespace BassGame
             ((System.ComponentModel.ISupportInitialize)(this.ptrbLight4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptrbLight5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptrbLight6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptrbLightP2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptrbLightP3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptrbLightP5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptrbLightP4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptrbLightP7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptrbLightP6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptrbLightP9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptrbLightP8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptrbLightP10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptrbLightP1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlGameBoard
@@ -737,7 +758,7 @@ namespace BassGame
             this.btnAmbarella.Size = new System.Drawing.Size(71, 50);
             this.btnAmbarella.TabIndex = 30;
             this.btnAmbarella.UseVisualStyleBackColor = true;
-            this.btnAmbarella.Click += new System.EventHandler(this.btnAmbarella_Click);            
+            this.btnAmbarella.Click += new System.EventHandler(this.btnAmbarella_Click);
             // 
             // btnBell
             // 
@@ -778,12 +799,127 @@ namespace BassGame
             this.btnOrange.UseVisualStyleBackColor = true;
             this.btnOrange.Click += new System.EventHandler(this.btnOrange_Click);
             // 
+            // ptrbLightP2
+            // 
+            this.ptrbLightP2.BackColor = System.Drawing.Color.Black;
+            this.ptrbLightP2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ptrbLightP2.Location = new System.Drawing.Point(29, 578);
+            this.ptrbLightP2.Name = "ptrbLightP2";
+            this.ptrbLightP2.Size = new System.Drawing.Size(10, 10);
+            this.ptrbLightP2.TabIndex = 33;
+            this.ptrbLightP2.TabStop = false;
+            // 
+            // ptrbLightP3
+            // 
+            this.ptrbLightP3.BackColor = System.Drawing.Color.Black;
+            this.ptrbLightP3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ptrbLightP3.Location = new System.Drawing.Point(99, 578);
+            this.ptrbLightP3.Name = "ptrbLightP3";
+            this.ptrbLightP3.Size = new System.Drawing.Size(10, 10);
+            this.ptrbLightP3.TabIndex = 34;
+            this.ptrbLightP3.TabStop = false;
+            // 
+            // ptrbLightP5
+            // 
+            this.ptrbLightP5.BackColor = System.Drawing.Color.Black;
+            this.ptrbLightP5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ptrbLightP5.Location = new System.Drawing.Point(241, 578);
+            this.ptrbLightP5.Name = "ptrbLightP5";
+            this.ptrbLightP5.Size = new System.Drawing.Size(10, 10);
+            this.ptrbLightP5.TabIndex = 36;
+            this.ptrbLightP5.TabStop = false;
+            // 
+            // ptrbLightP4
+            // 
+            this.ptrbLightP4.BackColor = System.Drawing.Color.Black;
+            this.ptrbLightP4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ptrbLightP4.Location = new System.Drawing.Point(171, 578);
+            this.ptrbLightP4.Name = "ptrbLightP4";
+            this.ptrbLightP4.Size = new System.Drawing.Size(10, 10);
+            this.ptrbLightP4.TabIndex = 35;
+            this.ptrbLightP4.TabStop = false;
+            // 
+            // ptrbLightP7
+            // 
+            this.ptrbLightP7.BackColor = System.Drawing.Color.Black;
+            this.ptrbLightP7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ptrbLightP7.Location = new System.Drawing.Point(382, 578);
+            this.ptrbLightP7.Name = "ptrbLightP7";
+            this.ptrbLightP7.Size = new System.Drawing.Size(10, 10);
+            this.ptrbLightP7.TabIndex = 38;
+            this.ptrbLightP7.TabStop = false;
+            // 
+            // ptrbLightP6
+            // 
+            this.ptrbLightP6.BackColor = System.Drawing.Color.Black;
+            this.ptrbLightP6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ptrbLightP6.Location = new System.Drawing.Point(312, 578);
+            this.ptrbLightP6.Name = "ptrbLightP6";
+            this.ptrbLightP6.Size = new System.Drawing.Size(10, 10);
+            this.ptrbLightP6.TabIndex = 37;
+            this.ptrbLightP6.TabStop = false;
+            // 
+            // ptrbLightP9
+            // 
+            this.ptrbLightP9.BackColor = System.Drawing.Color.Black;
+            this.ptrbLightP9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ptrbLightP9.Location = new System.Drawing.Point(524, 578);
+            this.ptrbLightP9.Name = "ptrbLightP9";
+            this.ptrbLightP9.Size = new System.Drawing.Size(10, 10);
+            this.ptrbLightP9.TabIndex = 40;
+            this.ptrbLightP9.TabStop = false;
+            // 
+            // ptrbLightP8
+            // 
+            this.ptrbLightP8.BackColor = System.Drawing.Color.Black;
+            this.ptrbLightP8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ptrbLightP8.Location = new System.Drawing.Point(454, 578);
+            this.ptrbLightP8.Name = "ptrbLightP8";
+            this.ptrbLightP8.Size = new System.Drawing.Size(10, 10);
+            this.ptrbLightP8.TabIndex = 39;
+            this.ptrbLightP8.TabStop = false;
+            // 
+            // ptrbLightP10
+            // 
+            this.ptrbLightP10.BackColor = System.Drawing.Color.Black;
+            this.ptrbLightP10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ptrbLightP10.Location = new System.Drawing.Point(557, 578);
+            this.ptrbLightP10.Name = "ptrbLightP10";
+            this.ptrbLightP10.Size = new System.Drawing.Size(10, 10);
+            this.ptrbLightP10.TabIndex = 42;
+            this.ptrbLightP10.TabStop = false;
+            // 
+            // ptrbLightP1
+            // 
+            this.ptrbLightP1.BackColor = System.Drawing.Color.Black;
+            this.ptrbLightP1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ptrbLightP1.Location = new System.Drawing.Point(-1, 578);
+            this.ptrbLightP1.Name = "ptrbLightP1";
+            this.ptrbLightP1.Size = new System.Drawing.Size(10, 10);
+            this.ptrbLightP1.TabIndex = 41;
+            this.ptrbLightP1.TabStop = false;
+            // 
+            // timerFLashPoint
+            // 
+            this.timerFLashPoint.Interval = 500;
+            this.timerFLashPoint.Tick += new System.EventHandler(this.timerFLashPoint_Tick);
+            // 
             // FormBassGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Brown;
             this.ClientSize = new System.Drawing.Size(567, 667);
+            this.Controls.Add(this.ptrbLightP10);
+            this.Controls.Add(this.ptrbLightP1);
+            this.Controls.Add(this.ptrbLightP9);
+            this.Controls.Add(this.ptrbLightP8);
+            this.Controls.Add(this.ptrbLightP7);
+            this.Controls.Add(this.ptrbLightP6);
+            this.Controls.Add(this.ptrbLightP5);
+            this.Controls.Add(this.ptrbLightP4);
+            this.Controls.Add(this.ptrbLightP3);
+            this.Controls.Add(this.ptrbLightP2);
             this.Controls.Add(this.btnApple);
             this.Controls.Add(this.btnOrange);
             this.Controls.Add(this.btnAmbarella);
@@ -842,6 +978,16 @@ namespace BassGame
             ((System.ComponentModel.ISupportInitialize)(this.ptrbLight4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptrbLight5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptrbLight6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptrbLightP2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptrbLightP3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptrbLightP5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptrbLightP4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptrbLightP7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptrbLightP6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptrbLightP9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptrbLightP8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptrbLightP10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptrbLightP1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -904,6 +1050,17 @@ namespace BassGame
         private System.Windows.Forms.Button btnBell;
         private System.Windows.Forms.Button btnApple;
         private System.Windows.Forms.Button btnOrange;
+        private System.Windows.Forms.PictureBox ptrbLightP2;
+        private System.Windows.Forms.PictureBox ptrbLightP3;
+        private System.Windows.Forms.PictureBox ptrbLightP5;
+        private System.Windows.Forms.PictureBox ptrbLightP4;
+        private System.Windows.Forms.PictureBox ptrbLightP7;
+        private System.Windows.Forms.PictureBox ptrbLightP6;
+        private System.Windows.Forms.PictureBox ptrbLightP9;
+        private System.Windows.Forms.PictureBox ptrbLightP8;
+        private System.Windows.Forms.PictureBox ptrbLightP10;
+        private System.Windows.Forms.PictureBox ptrbLightP1;
+        private System.Windows.Forms.Timer timerFLashPoint;
     }
 }
 

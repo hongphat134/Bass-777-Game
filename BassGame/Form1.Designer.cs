@@ -945,10 +945,12 @@ namespace BassGame
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.btnBig);
             this.Controls.Add(this.pnlGameBoard);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormBassGame";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bass 777 Game HTP";
             this.pnlGameBoard.ResumeLayout(false);

@@ -22,14 +22,16 @@ namespace BassGame
         public int flashLuckCount;
         public bool flashLuckflag;
         public bool flashPointFlag = false;
+
+        public Random r = new Random();
   
         Color DEFAULT_LIGHT_COLOR = Color.Black;
         Color LIGHT_ON_COLOR = Color.Red;
         #endregion
         public FormBassGame()
         {
-            InitializeComponent();
-            
+            //MessageBox.Show();
+            InitializeComponent();            
             gameplay = new Gameplay();
             howlList = new List<int>();
             
@@ -100,8 +102,8 @@ namespace BassGame
         private void btnStart_Click(object sender, EventArgs e)
         {
             timerFLashPoint.Stop();
-            //gameplay.Start();
-            gameplay.turns = 10;
+            gameplay.Start();
+            
             int barPoint =Int32.Parse(txtBar.Text);
             int sevenSevenPoint = Int32.Parse(txtSevenSeven.Text);
             int starPoint = Int32.Parse(txtStar.Text);
@@ -275,13 +277,14 @@ namespace BassGame
 
         private void timerFLashPoint_Tick(object sender, EventArgs e)
         {
+            Color randomColor = Color.FromArgb(r.Next(256), r.Next(256), r.Next(256));
             if (!flashPointFlag)
             {
-                ptrbLightP1.BackColor = LIGHT_ON_COLOR;
-                ptrbLightP3.BackColor = LIGHT_ON_COLOR;
-                ptrbLightP5.BackColor = LIGHT_ON_COLOR;
-                ptrbLightP7.BackColor = LIGHT_ON_COLOR;
-                ptrbLightP9.BackColor = LIGHT_ON_COLOR;
+                ptrbLightP1.BackColor = randomColor;
+                ptrbLightP3.BackColor = randomColor;
+                ptrbLightP5.BackColor = randomColor;
+                ptrbLightP7.BackColor = randomColor;
+                ptrbLightP9.BackColor = randomColor;
 
                 ptrbLightP2.BackColor = DEFAULT_LIGHT_COLOR;
                 ptrbLightP4.BackColor = DEFAULT_LIGHT_COLOR;
@@ -293,11 +296,11 @@ namespace BassGame
             }
             else
             {
-                ptrbLightP2.BackColor = LIGHT_ON_COLOR;
-                ptrbLightP4.BackColor = LIGHT_ON_COLOR;
-                ptrbLightP6.BackColor = LIGHT_ON_COLOR;
-                ptrbLightP8.BackColor = LIGHT_ON_COLOR;
-                ptrbLightP10.BackColor = LIGHT_ON_COLOR;
+                ptrbLightP2.BackColor = randomColor;
+                ptrbLightP4.BackColor = randomColor;
+                ptrbLightP6.BackColor = randomColor;
+                ptrbLightP8.BackColor = randomColor;
+                ptrbLightP10.BackColor = randomColor;
 
                 ptrbLightP1.BackColor = DEFAULT_LIGHT_COLOR;
                 ptrbLightP3.BackColor = DEFAULT_LIGHT_COLOR;
